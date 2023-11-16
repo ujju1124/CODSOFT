@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Logo Maker</title>
+    <style>
+      :root {
+        --primary-color: #e6e6e6;
+        --secondary-color: #f0f0f0;
+        --tertiary-color: #d3d3d3;
+        --extra-color: #f5f5f5;
+      }
+
+      @import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Poppins:wght@400;700&family=Roboto:wght@500&display=swap");
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+      }
+
+      nav {
+        background-color: #6b7a8f;
+        position: fixed;
+        top: 0;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        width: 100vw;
+        line-height: 40px;
+        z-index: 100;
+      }
+
+      nav img {
+        max-height: 65px;
+        border-radius: 50%;
+        padding-top: 15px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        margin-right: -15px;
+      }
+
+      nav li {
+        margin: 0 15px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .auth-section {
+        display: flex;
+        align-items: center;
+      }
+
+      .login,
+      .signup {
+        margin-left: 15px;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      .login {
+        background-color: blue;
+      }
+      .login:hover {
+        background-color: rgb(215, 215, 240);
+      }
+
+      .signup {
+        background-color: blue;
+      }
+      .signup:hover {
+        background-color: rgb(215, 215, 240);
+      }
+
+      main {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .main-content {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #f5f5f5;
+        height: 310px;
+      }
+
+      .slogan-text {
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .slogan-text h1 {
+        padding-top: 35px;
+        font-family: "Baloo 2", sans-serif;
+      }
+
+      .search-box {
+        display: flex;
+        align-items: center;
+        width: 300px;
+        margin: 20px;
+        padding: 10px;
+        border: 2px solid #333;
+        border-radius: 5px;
+        background-color: #efefef;
+        color: black;
+      }
+
+      .search-input {
+        flex: 1;
+        border: none;
+        padding: 8px;
+        margin-right: 10px;
+        background-color: #efefef;
+        color: #333;
+        font-weight: 600;
+      }
+
+      .search-btn {
+        padding: 8px 15px;
+        background-color: #333;
+        color: #efff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .middlecontent {
+        background-color: grey;
+        width: 100vw;
+      }
+
+      .header-text {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .header-text h1 {
+        padding: 20px;
+        max-width: 900px;
+        text-align: center;
+        font-family: poppins;
+        font-weight: 300;
+        color: white;
+        font-weight: 500;
+      }
+
+      .features {
+        font-size: large;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas:
+          "box1 box2 box3"
+          "box4 box5 box6";
+        font-family: poppins;
+      }
+
+      .features div {
+        text-align: center;
+        padding: 15px;
+        background-color: #f8f8f8;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .features div:hover {
+        transform: scale(1.1);
+      }
+
+      .box1 {
+        grid-area: box1;
+      }
+
+      .box2 {
+        grid-area: box2;
+      }
+
+      .box3 {
+        grid-area: box3;
+      }
+
+      .box4 {
+        grid-area: box4;
+      }
+
+      .box5 {
+        grid-area: box5;
+      }
+
+      .box6 {
+        grid-area: box6;
+      }
+
+      .features h3 {
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .features h5 {
+        color: #555;
+      }
+      .demoimages {
+        background-color: white;
+        width: 100vw;
+      }
+
+      .creationHeader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 14px;
+      }
+
+      .creationHeader h1 {
+        font-family: poppins;
+        font-weight: 600;
+        font-size: 24px;
+        margin-top: 27px;
+      }
+
+      .ourCreation {
+        display: grid;
+        grid-template-areas:
+          "image1 image2 image3"
+          "image4 image5 image6";
+        grid-gap: 1rem;
+        margin: 20px;
+      }
+
+      .ourCreation div {
+        text-align: center;
+        padding: 15px;
+        background-color: #f8f8f8;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .image1 {
+        grid-area: image1;
+      }
+
+      .image2 {
+        grid-area: image2;
+      }
+
+      .image3 {
+        grid-area: image3;
+      }
+
+      .image4 {
+        grid-area: image4;
+      }
+
+      .image5 {
+        grid-area: image5;
+      }
+
+      .image6 {
+        grid-area: image6;
+      }
+
+      .ourCreation img {
+        max-width: 160px;
+        max-height: 150px;
+        margin-bottom: 35px;
+        transition: transform 0.3s ease;
+      }
+
+      .ourCreation img:hover {
+        transform: scale(1.3);
+      }
+
+      .lastSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #162842;
+        width: 100vw;
+        height: 282px;
+        margin-top: -17px;
+      }
+
+      .text {
+        text-align: center;
+        color: white;
+        font-family: sans-serif;
+        font-weight: 350;
+        max-width: 950px;
+        margin: 180px;
+      }
+
+      .lastText {
+        padding-top: 10px;
+        font-family: ballo 2;
+        color: rgb(235, 230, 230);
+        font-weight: 350;
+      }
+
+      .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60vw;
+        height: 74px;
+      }
+
+      .image img {
+        max-width: 60px;
+        max-height: 30px;
+        margin: 10px;
+      }
+
+      nav a {
+        position: relative;
+        border-bottom: 2px solid transparent;
+        transition: color 0.3s ease, border-bottom 0.5s ease;
+      }
+
+      nav a:hover {
+        color: #e9f0f7;
+        border-bottom: 2px solid #e9f0f7;
+      }
+
+      @media only screen and (max-width: 600px) {
+        nav {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        nav ul {
+          margin-top: 10px;
+          margin-right: 0;
+        }
+
+        .auth-section {
+          flex-direction: column;
+          align-items: center;
+          margin-top: 10px;
+        }
+
+        .search-box {
+          width: 80%;
+        }
+
+        .features {
+          grid-template-areas:
+            "box1"
+            "box2"
+            "box3"
+            "box4"
+            "box5"
+            "box6";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <div>
+          <img src="images/logo.png" alt="Your Company Logo" />
+        </div>
+        <ul>
+          <li><a href="#">Logo Maker</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Logo Ideas</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+        <div class="auth-section">
+          <button class="login">Login</button>
+          <button class="signup">Sign Up</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="main-content">
+        <div class="slogan-text">
+          <h1>Make a logo with LogoLoom</h1>
+          <h3>"Your Vision, Our Creation: Unleashing the Power of Logos!"</h3>
+        </div>
+        <div class="search-box">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Enter your company's name"
+          />
+          <button class="search-btn">Search</button>
+        </div>
+      </div>
+    </main>
+    <div class="middlecontent">
+      <div class="header-text">
+        <h1>
+          Discover a logo creator that goes beyond expectations, offering you
+          everything a seasoned designer would.
+        </h1>
+      </div>
+
+      <div class="features">
+        <div class="box1">
+          <img
+            src="https://cdn.logojoy.com/wp-content/uploads/2018/12/14141836/ic_image.svg"
+            alt="Your Logo"
+            style="max-width: 80px; max-height: 80px; margin-bottom: 10px"
+          />
+          <h3>1. High-Resolution Artistry</h3>
+          <h5>
+            &bull; Delivering crisp, high-resolution PNG and JPG logo files for
+            versatile use online or offline.
+          </h5>
+        </div>
+        <div class="box2">
+          <img
+            src="https://cdn.logojoy.com/wp-content/uploads/2018/12/14141838/ic_pen_tool.svg"
+            alt="Your Logo"
+            style="max-width: 80px; max-height: 80px; margin-bottom: 10px"
+          />
+          <h3>2. Vector Thread Mastery</h3>
+          <h5>
+            &bull; Providing scalable SVG and EPS logo files, ensuring your logo
+            looks flawless at any size and is print-ready.
+          </h5>
+        </div>
+        <div class="box3">
+          <img
+            src="https://cdn.logojoy.com/wp-content/uploads/2018/12/14162409/ic_shirt.svg"
+            alt="Your Logo"
+            style="max-width: 80px; max-height: 80px; margin-bottom: 10px"
+          />
+          <h3>3. Color variations</h3>
+          <h5>
+            &bull; Get black and white, colored, and transparent background
+            variations of your logo.
+          </h5>
+        </div>
+        <div class="box4">
+          <img
+            src="https://cdn.logojoy.com/wp-content/uploads/2018/12/14162410/ic_social.svg"
+            alt="Your Logo"
+            style="max-width: 80px; max-height: 80px; margin-bottom: 10px"
+          />
+          <h3>4. Social media templates</h3>
+          <h5>
+            &bull; Design perfectly-sized profiles and posts for Facebook,
+            Twitter, YouTube, and more. file icon
+          </h5>
+        </div>
+        <div class="box5">
+          <img
+            src="https://cdn.logojoy.com/wp-content/uploads/2018/12/14141839/ic_phone.svg"
+            alt="Your Logo"
+            style="max-width: 80px; max-height: 80px; margin-bottom: 10px"
+          />
+          <h3>5. Eternal Logo Assistance</h3>
+          <h5>
+            &bull; Offering a lifetime of support for logo-related queries, file
+            handling, design adjustments, and getting started assistance.
+          </h5>
+        </div>
+        <div class="box6">
+          <img
+            src="https://cdn.logojoy.com/wp-content/uploads/2018/12/14141829/ic_copy.svg"
+            alt="Your Logo"
+            style="max-width: 80px; max-height: 80px; margin-bottom: 10px"
+          />
+          <h3>6. Royalty-free logos</h3>
+          <h5>
+            &bull; Granting the freedom to use downloaded logo files for any
+            commercial or non-commercial purpose without restrictions.
+          </h5>
+        </div>
+      </div>
+    </div>
+    <div class="demoimages">
+      <div class="creationHeader">
+        <h1>Look at some of our beautiful creations :)</h1>
+      </div>
+
+      <div class="ourCreation">
+        <div class="image1">
+          <!-- Image 1 -->
+          <img src="images/image1.png" alt="Image 1" />
+        </div>
+        <div class="image2">
+          <!-- Image 2 -->
+          <img src="images/image2.png" alt="Image 2" />
+        </div>
+        <div class="image3">
+          <!-- Image 3 -->
+          <img src="images/image3.png" alt="Image 3" />
+        </div>
+        <div class="image4">
+          <!-- Image 4 -->
+          <img src="images/image4.png" alt="Image 4" />
+        </div>
+        <div class="image5">
+          <!-- Image 5 -->
+          <img src="images/image5.png" alt="Image 5" />
+        </div>
+        <div class="image6">
+          <!-- Image 6 -->
+          <img src="images/image6.png" alt="Image 6" />
+        </div>
+      </div>
+    </div>
+
+    <footer class="lastSection">
+      <div class="text">
+        LOGO LOOM
+        <p class="lastText">
+          Welcome to LogoLoom, where we unleash the power of logos. Our platform
+          offers a seamless experience for creating high-resolution, versatile,
+          and unique logos. With a commitment to excellence, LogoLoom provides
+          vector mastery, diverse color variations, social media templates,
+          eternal logo assistance, and royalty-free logos. Join us in crafting
+          the perfect visual representation for your brand. Your vision, our
+          creation!
+        </p>
+
+        <div class="image">
+          <img src="images/facebook.svg" alt="Facebook" />
+          <img src="images/twitter.svg" alt="Twitter" />
+          <img src="images/instagram.svg" alt="Instagram" />
+          <img src="images/linkedin.svg" alt="LinkedIn" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,2 +1,0 @@
-# CODSOFT
-Projects for internship.

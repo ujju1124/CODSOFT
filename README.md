@@ -1,14 +1,15 @@
 
-# Landing Page Project
+# Internship Project
 
-This landing page project was created as Task 1 for an internship with CodeSoft. It showcases a simple landing page built using HTML and CSS.
+This project was created as Task for an internship with CodeSoft. It showcases a simple landing page, responsive personal portfolio and a simple calculator built using HTML, CSS and JAVASCRIPT.
 
 ## Features
 
-- HTML and CSS Implementation
-- Task 1 for CodeSoft Internship
+- HTML, CSS and JAVASCRIPT Implementation
+- Task for CodeSoft Internship
 
 ## Technologies Used
 
 - HTML
 - CSS
+- JAVASCRIPT
